@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!--Navbar-->
+        <div class="grid grid-cols-3 h-31 w-screen items-center pt-3">
+            <img src="/static/airbnb-logo.png" alt="airbnb-logo" class="h-16 w-28 cursor-pointer ml-16">
+            <div id="#navtextcontainer" class="flex justify-center items-center space-x-6">
+                <p class="cursor-pointer text-lg">Stays</p>
+                <div class="hover:bg-gray-100 rounded-full">
+                    <button class="text-lg text-gray-500 py-2 px-2 hover:text-gray-700">Experiences</button>
+                </div>               
+            </div>
+            <div id="navlinkcontainer" class="flex justify-end items-center gap-1 absolute right-16">
+                <div class="hover:bg-gray-100 rounded-full"><button class="text-sm font-semibold py-3 px-3">Airbnb your home</button></div>
+                <div class="hover:bg-gray-100 rounded-full cursor-pointer px-3 py-3">
+                    <img src="/static/globeicon.png" class="h-5"></div>
+                <div class="flex justify-center items-center gap-3 px-4 py-3 border rounded-full cursor-pointer hover:shadow-md">
+                    <img src="/static/menuicon.png" class="h-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      </svg>      
+                </div>
+            </div>
+        </div>
+        <!--Searchbar-->
+        <div id="categorybarcontainer" class="flex justify-center items-center pt-3 w-screen border-b pb-5">
+            <div id="categorycontentcontainer" class="flex justify-center items-center border rounded-full shadow-md w-fit gap-10 h-16 px-2">
+                <div class="flex justify-center gap-32 cursor-pointer">
+                    <div class="flex flex-col">
+                        <p class="text-sm font-medium">Where</p>
+                        <p class="text-base font-normal text-gray-500">Search destinations</p>
+                    </div> 
+                    <p class="border"></p>                  
+                </div>
+                <div class="flex justify-center gap-12 cursor-pointer">
+                    <div class="flex flex-col">
+                        <p class="text-sm font-medium">Check in</p>
+                        <p class="text-base font-normal text-gray-500">Add dates</p>
+                    </div>
+                    <p class="border"></p>
+                </div>    
+                <div class="flex justify-center gap-12 cursor-pointer">
+                    <div class="flex flex-col">
+                        <p class="text-sm font-medium">Check out</p>
+                        <p class="text-base font-normal text-gray-500">Add dates</p>
+                    </div>
+                    <p class="border"></p>    
+                </div>
+                <div class="flex justify-center gap-32 cursor-pointer">
+                    <div class="flex flex-col">
+                        <p class="text-sm font-medium">Who</p>
+                        <p class="text-base font-normal text-gray-500">Add guests</p>
+                    </div>
+                    <div class="bg-red-600 border rounded-full p-3 hover:bg-red-700 cursor-pointer">
+                        <img src="/static/searchicon.png" class="h-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--Categorybar-->
+    <div class="flex items-center space-x-5 h-24">
+        <div class="flex items-center gap-x-8 cursor-pointer">
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black pl-36 hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/view.jpeg" class="h-6 w-6">
+                <p class="text-sm">Amazing views</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/pool.jpeg" class="h-6 w-6">
+                <p class="text-sm">Swimming pool</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/farmhouse.jpeg" class="h-6 w-6">
+                <p class="text-sm">Farms</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/game.jpeg" class="h-6 w-6">
+                <p class="text-sm">Games</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/historical building.jpeg" class="h-6 w-6">
+                <p class="text-sm">Historical buildings</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/beachhouse.jpeg" class="h-6 w-6">
+                <p class="text-sm">Beach house</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/bedroom.jpeg" class="h-6 w-6">
+                <p class="text-sm">Bedrooms</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/landscape.jpeg" class="h-6 w-6">
+                <p class="text-sm">Landscape</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/surf.jpeg" class="h-6 w-6">
+                <p class="text-sm">Surfing</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/golf.jpeg" class="h-6 w-6">
+                <p class="text-sm">Golfing</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/forest.jpeg" class="h-6 w-6">
+                <p class="text-sm">Forest</p>
+            </div>
+            <div class="flex flex-col items-center text-gray-400 gap-2 hover:text-black hover:underline underline-offset-8 decoration-gray-400 decoration-1 transition duration-300">
+                <img src="/static/OMG.jpeg" class="h-6 w-6">
+                <p class="text-sm">OMG!</p>
+            </div>
+        </div>
+        <div class="border rounded-full cursor-pointer border-gray-400 h-8 w-8 flex justify-center items-center hover:h-9 hover:w-9 hover:shadow-gray-400 hover:shadow-lg transition duration-700">
+            <img src="/static/right.png" class="h-4 w-4 transition duration-700 hover:h-5 hover:w-5">
+        </div>    
+    </div>
+    </header>
+     
+    <!--Hotel-->
+    <main class="mt-2 mx-24 h-fit mb-8">
+        <div class="grid grid-cols-4 grid-rows-3">
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img1.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Pokhara, Nepal</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.88</p></div>
+                </div>
+                <p class="text-sm text-gray-400">Mountain and lake views</p>
+                <p class="text-sm text-gray-400">Aug 27 - Sep 1</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$141</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img2.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Darjeeling, India</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.97</p></div>
+                </div>
+                <p class="text-sm text-gray-400">Garden and valley views</p>
+                <p class="text-sm text-gray-400">Aug 20 - 25</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$12</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img3.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Khet Watthana, Thailand</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.89</p></div>
+                </div>
+                <p class="text-sm text-gray-400">1,539 kilometers away</p>
+                <p class="text-sm text-gray-400">Oct 13 - 18</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$67</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img4.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Kiruna N, Sweden</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">5.0</p></div>
+                </div>
+                <p class="text-sm text-gray-400">6,731 kilometers away</p>
+                <p class="text-sm text-gray-400">Aug 4 - 9</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$109</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img1.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Pokhara, Nepal</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.88</p></div>
+                </div>
+                <p class="text-sm text-gray-400">Mountain and lake views</p>
+                <p class="text-sm text-gray-400">Aug 27 - Sep 1</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$141</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img2.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Darjeeling, India</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.97</p></div>
+                </div>
+                <p class="text-sm text-gray-400">Garden and valley views</p>
+                <p class="text-sm text-gray-400">Aug 20 - 25</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$12</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img3.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Khet Watthana, Thailand</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.89</p></div>
+                </div>
+                <p class="text-sm text-gray-400">1,539 kilometers away</p>
+                <p class="text-sm text-gray-400">Oct 13 - 18</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$67</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img4.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Kiruna N, Sweden</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">5.0</p></div>
+                </div>
+                <p class="text-sm text-gray-400">6,731 kilometers away</p>
+                <p class="text-sm text-gray-400">Aug 4 - 9</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$109</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img1.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Pokhara, Nepal</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.88</p></div>
+                </div>
+                <p class="text-sm text-gray-400">Mountain and lake views</p>
+                <p class="text-sm text-gray-400">Aug 27 - Sep 1</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$141</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img2.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Darjeeling, India</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.97</p></div>
+                </div>
+                <p class="text-sm text-gray-400">Garden and valley views</p>
+                <p class="text-sm text-gray-400">Aug 20 - 25</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$12</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img3.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Khet Watthana, Thailand</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">4.89</p></div>
+                </div>
+                <p class="text-sm text-gray-400">1,539 kilometers away</p>
+                <p class="text-sm text-gray-400">Oct 13 - 18</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$67</p><p class="text-sm font-normal">night</p></div>
+            </div>
+            <div class="flex flex-col h-96 w-72 cursor-pointer">
+                <img src="/static/img4.jpg" alt="" class="w-72 h-64 rounded-xl">
+                <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Kiruna N, Sweden</p>
+                    <div class="flex flex-row items-center"><img src="/static/star rating.png" class="h-5"><p class="text-sm font-normal">5.0</p></div>
+                </div>
+                <p class="text-sm text-gray-400">6,731 kilometers away</p>
+                <p class="text-sm text-gray-400">Aug 4 - 9</p>
+                <div class="flex justify-start gap-1 mt-2"><p class="text-sm font-medium">$109</p><p class="text-sm font-normal">night</p></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="flex justify-between h-10 w-screen items-center px-20 fixed bottom-0 bg-white border-t">
+        <div class="flex text-sm space-x-2">
+            <p>© 2024 Airbnb, Inc.</p>
+            <p>·</p>
+            <p class="cursor-pointer hover:underline">Terms</p>
+            <p>·</p>
+            <p class="cursor-pointer hover:underline">Sitemap</p>
+            <p>·</p>
+            <p class="cursor-pointer hover:underline">Privacy</p> 
+            <p>·</p>
+            <p class="cursor-pointer hover:underline">Your Privacy Choices</p>
+        </div>
+        <div class="flex items-center text-sm font-medium space-x-5">
+            <div class="flex items-center gap-1"><img src="/static/globeicon.png" class="h-4 cursor-pointer">
+            <p class="cursor-pointer hover:underline">English(US)</p></div>
+            <p>$<span class="cursor-pointer hover:underline">USD</span></p>
+            <p class="cursor-pointer hover:underline">Support & resources</p>
+            <img src="/static/down arrow.png" class="h-7 cursor-pointer">
+        </div>
+    </footer>   
+</body>
+</html>
